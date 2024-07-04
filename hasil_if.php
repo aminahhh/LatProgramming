@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <title>Hasil Input Nilai Mahasiswa</title>
@@ -14,23 +14,23 @@
         $nim = $_POST['nim'];
         $kelas = $_POST['kelas'];
         $mata_kuliah = $_POST['mata_kuliah'];
-        $nilai1 =  $_POST['nilai1'];
+        $nilai1 = $_POST['nilai1'];
         $nilai2 = $_POST['nilai2'];
         $uts = $_POST['uts'];
         $uas = $_POST['uas'];
         $absen = $_POST['absen'];
-        $hasil =($nilai1*0.15) + ($nilai2*0.15) + ($uts*0.20) + ($uas*0.30);
+        $hasil = ($nilai1 * 0.15) + ($nilai2 * 0.15) + ($uts * 0.20) + ($uas * 0.30) + ($absen * 0.20);
         $grade = '';
 
-        if ($hasil >= 0 && $nilai < 50) {
+        if ($hasil >= 0 && $hasil < 50) {
             $grade = "E";
-        } elseif ($hasil >= 50 && $nilai < 60) {
+        } elseif ($hasil >= 50 && $hasil < 60) {
             $grade = "D";
-        } elseif ($hasil >= 60 && $nilai < 75) {
+        } elseif ($hasil >= 60 && $hasil < 75) {
             $grade = "C";
-        } elseif ($hasil >= 75 && $nilai < 85) {
+        } elseif ($hasil >= 75 && $hasil < 85) {
             $grade = "B";
-        } elseif ($hasil >= 85 && $nilai <= 100) {
+        } elseif ($hasil >= 85 && $hasil <= 100) {
             $grade = "A";
         } else {
             $grade = "Nilai Anda di luar jangkauan";
@@ -41,9 +41,12 @@
         echo "NIM: $nim<br>";
         echo "Kelas: $kelas<br>";
         echo "Mata Kuliah: $mata_kuliah<br>";
-        echo "Nilai1: $nilai1*0.15<br>";
+        echo "Nilai1: $nilai1<br>";
         echo "Nilai2: $nilai2<br>";
-        echo "hasil: $hasil, dikonversi menjadi Grade: $grade";
+        echo "UTS: $uts<br>";
+        echo "UAS: $uas<br>";
+        echo "Absen: $absen<br>";
+        echo "Hasil: $hasil, dikonversi menjadi Grade: $grade";
         echo "</div>";
     } else {
         echo "<div class='alert alert-warning' role='alert'>";
@@ -54,5 +57,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<a href="latihan_if.php">INPUT DATA LAGI</a>
 </body>
 </html>

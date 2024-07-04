@@ -9,7 +9,7 @@
 <body>
 <div class="container mt-5">
     <h1 class="mb-3">Form Input Nilai Mahasiswa</h1>
-    <form action="hasil.php" method="post" class="needs-validation" novalidate>
+    <form action="hasil_if.php" method="post" class="needs-validation" novalidate>
         <div class="mb-3">
             <label for="nama" class="form-label">Nama:</label>
             <input type="text" class="form-control" id="nama" name="nama" required>
@@ -47,7 +47,7 @@
         </div>
         <div class="mb-3">
             <label for="absen" class="form-label">absen:</label>
-            <input type="number" class="form-control" id="absen" name="uts" min="0" max="100" required>
+            <input type="number" class="form-control" id="absen" name="absen" min="0" max="100" required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
